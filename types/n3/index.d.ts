@@ -109,7 +109,7 @@ export class Triple extends Quad implements RDF.Quad { }
 export namespace DataFactory {
     function namedNode<Iri extends string = string>(value: Iri): NamedNode<Iri>;
     function blankNode(value?: string): BlankNode;
-    function literal(value: string | number, languageOrDatatype?: string | RDF.NamedNode): Literal;
+    function literal(value: boolean | string | number, languageOrDatatype?: string | RDF.NamedNode): Literal;
     function variable(value: string): Variable;
     function defaultGraph(): DefaultGraph;
     function quad(subject: RDF.Quad_Subject, predicate: RDF.Quad_Predicate, object: RDF.Quad_Object, graph?: RDF.Quad_Graph): Quad;
